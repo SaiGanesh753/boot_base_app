@@ -1,0 +1,6 @@
+spring:
+  config:
+    import: classpath:/default.yml
+
+server:
+  port: 1313
