@@ -1,0 +1,35 @@
+server:
+  port: 1414
+  servlet:
+    context-path: /boot_base_app
+
+spring.banner.location: classpath:custom-banner.txt
+
+##JPA
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL81Dialect
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate: default-scema
+
+
+##spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+---
+##Database
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://127.0.0.1:5432/employee_hrms_sm
+    username: saiganesh
+    password: user1
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 20
+
+  ##spring.cloud.gcp.sql.enabled=false
+  ##spring.jpa.properties.hibernate.default_schema=public
+
+  
+  
